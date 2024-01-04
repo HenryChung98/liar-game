@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiarGame</title>
+</head>
+
+<body>
+  <div id="container">
+    <div class="smallBox player">
+    <label for="citizenNum">Citizen</label>
+    <select id="citizenNum" name="citizenNum" onchange="getSelectedValue(this)">
+
+    </select>
+  </div>
+  <div class="smallBox liar">
+    <label for="liarNum">Liar</label>
+    <select id="liarNum" name="liarNum" onchange="getSelectedValue(this)">
+
+    </select>
+  </div>
+    <div class="smallBox spy">
+    <label for="spyNum">Spy</label>
+    <select id="spyNum" name="spyNum" onchange="getSelectedValue(this)">
+
+    </select>
+  </div>
+  <input type="checkbox" name="mode" value="another" id="another"> another word
+  <button id="nextBtn">next</button>
+  </div>
+
+</body>
+<link rel="stylesheet" href="style.css">
+<script src="module.js"></script>
+<script src="main.js"></script>
+</html>
