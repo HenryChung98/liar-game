@@ -124,15 +124,15 @@ function selectTopic() {
     td.addEventListener('click', function () {
 
       // ---------need to fix------------//
-      playerWord = getRandom(0, 2);
-      liarWord = getRandom(0, 2);
+      playerWord = getRandom(0, 9);
+      liarWord = getRandom(0, 9);
 
       if (playerWord === liarWord) {
-        if (liarWord === 0) {
-          liarWord = 1;
+        if (liarWord === 9) {
+          liarWord--;
         }
-        else if (liarWord === 2) {
-          liarWord = 1;
+        else{
+          liarWord++;
         }
       }
       // ---------need to fix------------//
@@ -144,7 +144,7 @@ function selectTopic() {
 
           // check game mode
           if (isChecked) {
-            liarValue = "[" + topics[i].items[liarWord].key + "]<br><br><br>press again</div>" + "(liar)";
+            liarValue = "[" + topics[i].items[liarWord].key + "]<br><br><br>press again</div>";
           }
           else {
             liarValue = "You are Liar<br><br><br>press again</div>";
