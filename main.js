@@ -166,6 +166,9 @@ function checkWord() {
   const newBox = document.getElementById('newBox');
   const wordBox = document.getElementById('wordBox');
   var pressTimer;
+  newBox.addEventListener('touchstart', (event) => {
+    event.preventDefault();
+  });
   newBox.addEventListener('mousedown', (event) => {
     event.preventDefault();
     pressTimer = window.setTimeout(() => {
