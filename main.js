@@ -166,9 +166,33 @@ function checkWord() {
   const newBox = document.getElementById('newBox');
   const wordBox = document.getElementById('wordBox');
   var pressTimer;
+
+  // for mobile
   newBox.addEventListener('touchstart', (event) => {
     event.preventDefault();
+    pressTimer = window.setTimeout(() => {
+      for (let i = 0; i <= roles.length; i++) {
+        if (roles[playerCount - 1] == "l") {
+          wordBox.innerHTML = liarValue;
+        }
+        else if (roles[playerCount - 1] == "s") {
+          wordBox.innerHTML = spyValue;
+        }
+        else {
+          wordBox.innerHTML = playerValue;
+        }
+      }
+      newBox.style.zIndex = 1;
+      wordBox.style.zIndex = 2;
+      wordBox.style.animation = 'scaleIn 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+      wordBox.style.display = 'flex';
+    }, 1000)
   });
+  newBox.addEventListener('touchend', function () {
+    clearTimeout(pressTimer);
+  });
+
+  // for desktop
   newBox.addEventListener('mousedown', (event) => {
     event.preventDefault();
     pressTimer = window.setTimeout(() => {
