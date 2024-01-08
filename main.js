@@ -166,7 +166,8 @@ function checkWord() {
   const newBox = document.getElementById('newBox');
   const wordBox = document.getElementById('wordBox');
   var pressTimer;
-  newBox.addEventListener('mousedown', () => {
+  newBox.addEventListener('mousedown', (event) => {
+    event.preventDefault();
     pressTimer = window.setTimeout(() => {
       for (let i = 0; i <= roles.length; i++) {
         if (roles[playerCount - 1] == "l") {
