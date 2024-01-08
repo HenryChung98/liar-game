@@ -85,11 +85,7 @@ function pushPlayerNum(obj, num) {
 
 // next button event listener
 nextBtn.addEventListener("click", function () {
-  console.log("citizenNum: " + citizenNum)
-  console.log("liar: " + liarNum)
-  console.log("spy: " + spyNum)
   playerCount = citizenNum + liarNum + spyNum;
-  console.log("all: " + playerCount);
   selectTopic();
   pushPlayerNum('c', citizenNum);
   pushPlayerNum('l', liarNum);
@@ -131,7 +127,7 @@ function selectTopic() {
         if (liarWord === 9) {
           liarWord--;
         }
-        else{
+        else {
           liarWord++;
         }
       }
@@ -144,14 +140,14 @@ function selectTopic() {
 
           // check game mode
           if (isChecked) {
-            liarValue = "[" + topics[i].items[liarWord].key + "]<br><br><br>press again</div>";
+            liarValue = "[" + topics[i].items[liarWord].key + " / " + topics[i].items[liarWord].value + "]<br><br><br>press again</div>";
           }
           else {
             liarValue = "You are Liar<br><br><br>press again</div>";
           }
 
-          spyValue = "You are Spy<br><br><br>[" + topics[i].items[playerWord].key + "]<br><br><br>press again</div>";
-          playerValue = "[" + topics[i].items[playerWord].key + "]<br><br><br>press again</div>";
+          spyValue = "You are Spy<br><br><br>[" + topics[i].items[playerWord].key + " / " + topics[i].items[playerWord].value + "]<br><br><br>press again</div>";
+          playerValue = "[" + topics[i].items[playerWord].key + " / " + topics[i].items[playerWord].value + "]<br><br><br>press again</div>";
         }
       }
       checkWord();
@@ -169,37 +165,41 @@ function checkWord() {
 
   const newBox = document.getElementById('newBox');
   const wordBox = document.getElementById('wordBox');
-  newBox.addEventListener('click', () => {
-    for (let i = 0; i <= roles.length; i++) {
-      if (roles[playerCount - 1] == "l") {
-        wordBox.innerHTML = liarValue;
+  var pressTimer;
+  newBox.addEventListener('mousedown', () => {
+    pressTimer = window.setTimeout(() => {
+      for (let i = 0; i <= roles.length; i++) {
+        if (roles[playerCount - 1] == "l") {
+          wordBox.innerHTML = liarValue;
+        }
+        else if (roles[playerCount - 1] == "s") {
+          wordBox.innerHTML = spyValue;
+        }
+        else {
+          wordBox.innerHTML = playerValue;
+        }
       }
-      else if (roles[playerCount - 1] == "s") {
-        wordBox.innerHTML = spyValue;
-      }
-      else {
-        wordBox.innerHTML = playerValue;
-      }
-    }
-    newBox.style.zIndex = 1;
-    wordBox.style.zIndex = 2;
-    wordBox.style.animation = 'scaleIn 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
-    wordBox.style.display = 'flex';
+      newBox.style.zIndex = 1;
+      wordBox.style.zIndex = 2;
+      wordBox.style.animation = 'scaleIn 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+      wordBox.style.display = 'flex';
+    }, 1000)
   });
-
+  newBox.addEventListener('mouseup', function () {
+    clearTimeout(pressTimer); // 마우스를 뗄 때 타이머를 클리어하여 클릭 이벤트를 방지합니다.
+  });
   wordBox.addEventListener('click', () => {
     wordBox.style.animation = 'scaleOut 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
     setTimeout(function () {
       wordBox.style.display = 'none';
-      
+
       newBox.style.zIndex = 2;
       wordBox.style.zIndex = 1;
     }, 200);
     playerCount--;
     if (playerCount === 0) {
-      containerBox.innerHTML = "start";
+      window.location.href = "timer.html";
+
     }
   });
 }
-
-
