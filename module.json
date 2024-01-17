@@ -1,0 +1,146 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "category": "Food",
+      "items": {
+        "Pho": "쌀국수",
+        "Fried chicken": "치킨",
+        "Fried rice": "볶음밥",
+        "Ramen": "라멘",
+        "Sandwich": "샌드위치",
+        "Pizza": "피자",
+        "Hamburger": "햄버거",
+        "Tonkatsu": "돈까스",
+        "okonomiyaki": "오꼬노미야끼",
+        "Barbeque": "바베큐"
+      }
+    },
+    {
+      "id": 2,
+      "category": "Job",
+      "items": {
+        "athlete": "운동선수",
+        "teacher": "교사",
+        "Computer Programmer": "컴퓨터 프로그래머",
+        "Babysitter": "베이비시터",
+        "Dentist": "치과의사",
+        "Police officer": "경찰",
+        "Cook": "요리사",
+        "Actor": "연기자",
+        "Designer": "디자이너"
+      }
+    },
+    {
+      "id": 3,
+      "category": "IceCream",
+      "items": {
+        "Ben & Jerry's": "밴 앤 제리스",
+        "Häagen-Dazs": "하겐다즈",
+        "Blizzard": "블리자드"
+      }
+    },
+    {
+      "id": 4,
+      "category": "MBTI",
+      "items": {
+        "ISTJ": "ISTJ",
+        "ISTP": "ISTP",
+        "ISFP": "ISFP",
+        "ISFJ": "ISFJ",
+        "INTP": "INTP",
+        "INTJ": "INTJ",
+        "INFP": "INFP",
+        "INFJ": "INFJ",
+        "ESTJ": "ESTJ",
+        "ESTP": "ESTP",
+        "ESFP": "ESFP",
+        "ESFJ": "ESFJ",
+        "ENTP": "ENTP",
+        "ENTJ": "ENTJ",
+        "ENFP": "ENFP",
+        "ENFJ": "ENFJ"
+      }
+    },
+    {
+      "id": 5,
+      "category": "Fruit",
+      "items": {
+        "Apple": "사과",
+        "Banana": "바나나",
+        "Water melon": "수박",
+        "Strawberry": "딸기",
+        "Blueberry": "블루베리",
+        "Orange": "오렌지",
+        "DragonFruit": "용과",
+        "Pineapple": "파인애플",
+        "Mangosteen": "망고스틴",
+        "Durian": "두리안"
+      }
+    },
+    {
+      "id": 6,
+      "category": "Sports",
+      "items": {
+        "SnowBoard": "스노우보드",
+        "Soccer": "축구",
+        "Basketball": "농구",
+        "Baseball": "야구",
+        "Golf": "골프",
+        "Tennis": "테니스",
+        "Hockey": "하키",
+        "Bouldering": "볼더링",
+        "Marathon": "마라톤",
+        "Shooting": "사격"
+      }
+    },
+    {
+      "id": 7,
+      "category": "Christmas",
+      "items": {
+        "Santa Claus": "산타 클로스",
+        "Rudolph": "루돌프",
+        "Harry Potter": "해리포터",
+        "Home Alone": "나 홀로 집에",
+        "Carol": "캐롤",
+        "Jesus": "예수님",
+        "Frozen": "겨울왕국",
+        "Snowman": "눈사람",
+        "Chimney": "굴뚝",
+        "Snow": "눈"
+      }
+    },
+    {
+      "id": 8,
+      "category": "Snack",
+      "items": {
+        "Reese's": "Reese's",
+        "Cheetos": "치토스",
+        "Choco Pie": "초코파이",
+        "Oreo": "오레오",
+        "Pocky": "포키",
+        "M&M's": "M&M's",
+        "Pringles": "프링글스",
+        "Hershey's": "허쉬스",
+        "Kit Kat": "킷켓",
+        "Poptarts": "팝 타르트"
+      }
+    },
+    {
+      "id": 9,
+      "category": "Animal",
+      "items": {
+        "Dog": "강아지",
+        "Cat": "고양이",
+        "Shark": "상어",
+        "Eagle": "독수리",
+        "Snake": "뱀",
+        "Sparrow": "참새",
+        "Salmon": "연어",
+        "Giraffe": "기린",
+        "Deer": "사슴",
+        "Turtle": "거북"
+      }
+    }
+  ]
+}
