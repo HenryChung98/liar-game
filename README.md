@@ -19,5 +19,5 @@
 #### Liar screen
 ![description](description/des6.png)
 
-#### 30 seconds given to descript.
+#### 30 seconds given to describe.
 ![description](description/des7.png)
