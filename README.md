@@ -1,5 +1,5 @@
 #### You can select the number of players.
-#### Spy is team with liar, and he has to descript a word clearly so that liar can notice it and spoil the game.
+#### Spy is team with liar, and he has to describe a word clearly so that liar can notice it.
 #### If you check the checkbox, only liar gets another word, which mean liar doesn't know he is liar(No spy).
 ![description](description/des1.png)
 
